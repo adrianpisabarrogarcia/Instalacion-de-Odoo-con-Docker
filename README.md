@@ -1,4 +1,7 @@
-# Instalar Odoo con Docker
+# Instalar Odoo con Docker 🐳
+
+## Descarga e Instalación
+
 
 1. Ir a [https://www.docker.com/products/docker-desktop](https://www.docker.com/products/docker-desktop) 
     1. Descargar docker
@@ -18,19 +21,20 @@
         En estos momentos podremos lazar comandos en la terminal (Linux/MacOS) o el cmd (si fuera Windows)
 
 2. Instalación de Oddo y sus requerimientos
-    1. Descargar la imagen de odoo, descargará todo lo que necesitamos
+
+    a. Descargar la imagen de odoo, descargará todo lo que necesitamos
 
     ```bash
     $ docker pull odoo
     ```
 
-    b.   Iniciamos un PostgreSQL server
+    b. Iniciamos un PostgreSQL server
 
     ```bash
     $ docker run -d -e POSTGRES_USER=odoo -e POSTGRES_PASSWORD=odoo -e POSTGRES_DB=postgres --name db postgres:13
     ```
 
-    c.  Iniciamos una instancia de Odoo
+    c. Iniciamos una instancia de Odoo
 
     ```bash
     $ docker run -p 8069:8069 --name odoo --link db:db -t odoo
@@ -38,7 +42,7 @@
 
 ## Información de interés
 
-- URL de acceso a odoo: http://localhost:80
+- URL de acceso a odoo: [http://localhost:8069](http://localhost:8069)
 - Iniciar contenedor:
 
 ```bash
