@@ -43,14 +43,17 @@
 ## Información de interés
 
 - URL de acceso a odoo: [http://localhost:8069](http://localhost:8069)
-- Iniciar contenedor:
+- Iniciar contenedores:
 
 ```bash
+$ docker start db
 $ docker start odoo
 ```
 
-- Detener contenedor
+- Detener contenedores:
 
 ```bash
 $ docker stop odoo
+$ docker stop db
+
 ```
